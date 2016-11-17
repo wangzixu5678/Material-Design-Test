@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.day70_practices.MainActivity">
+    <android.support.v7.widget.Toolbar
+        android:background="@color/colorPrimary"
+        android:id="@+id/toolbar"
+        app:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"/>
+<android.support.v4.widget.DrawerLayout
+    android:layout_weight="1"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="0dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab"
+            app:tabMode="fixed"
+            app:tabTextColor="@android:color/white"
+            app:tabBackground="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextAppearance="@android:style/TextAppearance.Large"
+            android:layout_height="wrap_content"/>
+        <android.support.v4.view.ViewPager
+            android:layout_weight="1"
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/navigation"
+        android:layout_gravity="start"/>
+</android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
